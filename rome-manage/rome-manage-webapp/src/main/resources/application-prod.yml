@@ -16,7 +16,7 @@ spring:
   datasource:
     username: ENC(jEmjzNoC9rTYorAj5mI84A==)
     password: ENC(jEmjzNoC9rTYorAj5mI84A==)
-    url: jdbc:mysql://127.0.0.1:3306/goblin?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+    url: jdbc:mysql://127.0.0.1:3306/rome?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
     type: com.alibaba.druid.pool.DruidDataSource
     # 文档 : https://github.com/alibaba/druid/tree/1.1.0/druid-spring-boot-starter
     druid:

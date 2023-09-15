@@ -1,7 +1,19 @@
+#### 项目结构：
+* admin-ui : 预留的可能存在的控制中台
+* cache: 缓存相关
+* common：通用类
+* Config：配置
+* generator：代码生成
+* manage：核心业务类
+  * dao | searvice | webapp
+* parent：pom管控
+* scheduling：预留的可能定时中心
+* security：安全
 
-项目所用技术
+
+#### 项目所用技术
 + Spring
-+ Spring Boot
++ Spring Boot~~~~~~~~~~~~~~~~~~~~
 + Spring MVC
 + Spring Security
 + Spring Cache
@@ -17,7 +29,7 @@
 + WebSocket
 + jasypt 配置文件加密
 
-项目包含了
+#### 项目包含
 + 分布式锁
 + 分布式唯一code构建
 + 分布式session共享(已不使用,项目无状态)
@@ -41,9 +53,7 @@
 + WebSocket 简单示例
 
 
-要求 :
+#### 要求 :
 + JDK 1.8
-+ redis 默认使用 127.0.0.1:6379
-+ mysql root/12345678 127.0.0.1:3306 数据库名称 : rome,基础sql见init.sql
 + lombok 插件(eclipse IntelliJ IDEA),不然项目可能会报错,但是不影响运行
 

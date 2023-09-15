@@ -1,16 +1,18 @@
 # 服务器
 server:
-  port: 8081
+  port: 7081
 
 # 日志
 logging:
   config: classpath:log4j2.xml
 
 redis:
-  host: 127.0.0.1
+  host: 140.143.167.210
   port: 6379
   timeout: 60
-  
+  password: 123456Aa
+  database: 3
+
 spring:
 # spring boot admin 监控 start
   boot:

@@ -1,10 +1,5 @@
 CREATE DATABASE  IF NOT EXISTS `rome` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `rome`;
--- MySQL dump 10.13  Distrib 8.0.12, for macos10.13 (x86_64)
---
--- Host: 127.0.0.1    Database: goblin
--- ------------------------------------------------------
--- Server version	8.0.13
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -246,7 +241,6 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `system_config`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `system_config` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -277,8 +271,7 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `system_log`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+SET character_set_client = utf8mb4 ;
 CREATE TABLE `system_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `user_id` bigint(20) DEFAULT NULL COMMENT '后台管理用户ID',
@@ -318,5 +311,3 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2019-01-11  9:32:36

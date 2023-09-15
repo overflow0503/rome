@@ -37,6 +37,7 @@ public class MysqlGenerator {
     public static void main(String[] args) {
         // 自定义需要填充的字段
         List<TableFill> tableFillList = new ArrayList<>();
+        String[] generatorTableNames = new String[]{};
         // tableFillList.add( new TableFill( "ASDD_SS", FieldIgnore.INSERT_UPDATE ) );
 
         // 代码生成器
@@ -62,9 +63,9 @@ public class MysqlGenerator {
                         .setDbType(DbType.MYSQL)// 数据库类型
                         .setTypeConvert(new MySqlTypeConvert())
                         .setDriverName("com.mysql.jdbc.Driver")
-                        .setUsername("root")
-                        .setPassword("root")
-                        .setUrl("jdbc:mysql://127.0.0.1:3306/goblin?characterEncoding=utf8")
+                        .setUsername("weelfly_dev_admin")
+                        .setPassword("Weelfly_2023")
+                        .setUrl("jdbc:mysql://bj-cdb-j2le6156.sql.tencentcdb.com:63795/rome?characterEncoding=utf8")
         ).setStrategy(
                 // 策略配置
                 new StrategyConfig()
@@ -72,7 +73,7 @@ public class MysqlGenerator {
                         // .setDbColumnUnderline(true)//全局下划线命名
                         .setTablePrefix("manage")// 此处可以修改为您的表前缀
                         .setNaming(NamingStrategy.underline_to_camel)// 表名生成策略
-                        // .setInclude( new String[]{  } ) // 需要生成的表
+                         .setInclude(generatorTableNames) // 需要生成的表
                         // .setExclude(new String[]{"test"}) // 排除生成的表
                         // 自定义实体父类
                         // .setSuperEntityClass("com.baomidou.demo.TestEntity")
