@@ -1,0 +1,29 @@
+send.mail: overflow0503@sina.com
+
+# 服务器
+server:
+  port: 7890
+
+spring:
+  application:
+      name: rome-admin-ui 
+  mail: 
+    port: 25
+    host: smtp.163.com
+    protocol: smtp
+    username: ${send.mail}
+    password: dakfpwjam
+    default-encoding: UTF-8
+    properties:
+      mail.smtp.auth: true 
+      mail.smtp.starttls: false 
+      mail.smtp.quitwait: false
+  boot:
+      admin:
+        notify:
+          mail:
+            to: 549291615@qq.com # 通知到哪个邮箱
+
+
+
+

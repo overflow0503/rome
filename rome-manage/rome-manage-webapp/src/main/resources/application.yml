@@ -1,0 +1,68 @@
+
+spring:
+  # 多环境配置文件
+  profiles:
+    active: dev
+  application:
+    name: rome-manage-webapp
+  # HTTP字符编码
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  # 缓存
+  cache:
+    type: redis
+# AOP
+  aop:
+    proxy-target-class: true
+    auto: true
+# 分页 page helper
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+# 压缩,这个属性样板打开了压缩选项，这样稍后应用到JSON正文的压缩就有保证了。
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+
+mybatis-plus:
+  mapper-locations: com/weelfly/manage/mapper/xml/*.xml
+  type-aliases-package: com.weelfly.manage.bean.domain
+  type-enums-package: com.weelfly.manage.bean.domain.enums
+  global-config:
+    db-config:
+      db-type: mysql
+      id-type: auto
+      field-strategy: not_empty
+      table-underline: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    
+# 项目自定义配置
+rome:
+  mybatis-plus:
+    performance-interceptor:
+      enabled: true
+  web-socket:
+    client-broker-destination-prefixes: /topic
+    server-application-destination-prefixes: /app
+    stomp-endpoints-paths: /rome
+  filter:
+    injection-attack-interceptor:
+      enabled: true
+
+# jwt 配置
+jwt:
+  # header中key,以改值为key在header中获取 request.getHeader('key')
+  header: Authorization
+  # 签名密钥
+  secret: rome
+  # 过期时间,单位:秒
+  expiration: 3600
+      
